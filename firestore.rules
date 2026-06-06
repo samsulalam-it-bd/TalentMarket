@@ -1,0 +1,192 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Auth Check Functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isSignedIn() && 
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true;
+    }
+
+    function isBanned() {
+      return isSignedIn() && 
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isBanned == true;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isChatParticipant(roomId) {
+      return isSignedIn() && request.auth.uid in get(/databases/$(database)/documents/chatRooms/$(roomId)).data.participants;
+    }
+
+    // App Preferences & Configurations
+    match /settings/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /app_config/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Ad Placements System
+    match /ad_placements/{adId} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // Users Accounts
+    match /users/{userId} {
+      allow read: if isSignedIn();
+      
+      // Prevent privilege escalation where a user sets themselves as isAdmin or isBanned
+      allow create: if isSignedIn() && isOwner(userId) && 
+                    (!request.resource.data.keys().hasAny(['isAdmin', 'isBanned']) || 
+                    (request.resource.data.isAdmin == false && request.resource.data.isBanned == false));
+                    
+      allow update: if isSignedIn() && (isAdmin() || (isOwner(userId) && 
+                    (!request.resource.data.keys().hasAny(['isAdmin', 'isBanned']) || 
+                    (request.resource.data.isAdmin == resource.data.isAdmin && request.resource.data.isBanned == resource.data.isBanned))));
+                    
+      allow delete: if isAdmin();
+      
+      match /favorites/{favId} {
+        allow read, write: if isSignedIn() && (isOwner(userId) || isAdmin());
+      }
+      match /favorite_categories/{favId} {
+        allow read, write: if isSignedIn() && (isOwner(userId) || isAdmin());
+      }
+      match /favorite_jobs/{favId} {
+        allow read, write: if isSignedIn() && (isOwner(userId) || isAdmin());
+      }
+      match /favorite_workers/{favId} {
+        allow read, write: if isSignedIn() && (isOwner(userId) || isAdmin());
+      }
+    }
+
+    // Jobs Postings
+    match /jobs/{jobId} {
+      allow read: if true;
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+    }
+
+    // Workers Profile Directory
+    match /workers/{workerId} {
+      allow read: if true;
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+    }
+
+    // Notifications Hub
+    match /notifications/{userId}/items/{notifId} {
+      allow read, update, delete: if isSignedIn() && (isOwner(userId) || isAdmin());
+      allow create: if isSignedIn();
+    }
+
+    // Push Messaging Systems
+    match /fcm_messages/{msgId} {
+      allow create: if isSignedIn();
+      allow read: if isAdmin();
+    }
+
+    // Applications Tracking System
+    match /applications/{appId} {
+      allow read: if isSignedIn() && (resource.data.workerId == request.auth.uid || resource.data.employerId == request.auth.uid || isAdmin());
+      allow create: if isSignedIn() && request.resource.data.workerId == request.auth.uid;
+      allow update: if isSignedIn() && (resource.data.workerId == request.auth.uid || resource.data.employerId == request.auth.uid || isAdmin());
+      allow delete: if isSignedIn() && (resource.data.workerId == request.auth.uid || isAdmin());
+    }
+
+    // Support Request Center
+    match /support_requests/{requestId} {
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow read: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow update, delete: if isAdmin();
+    }
+
+    // Categories Directory
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Admin Controls and Security Panels
+    match /admin/{document=**} {
+      allow read, write: if isAdmin();
+    }
+    
+    match /admin_logs/{docId} {
+      allow read, write: if isAdmin();
+    }
+    
+    match /security_action_logs/{docId} {
+      allow read, write: if isAdmin();
+    }
+
+    // Live Instant Messaging System (Chat)
+    match /chatRooms/{roomId} {
+      allow read: if isSignedIn() && request.auth.uid in resource.data.participants;
+      allow create: if isSignedIn() && request.auth.uid in request.resource.data.participants;
+      allow update: if isSignedIn() && request.auth.uid in resource.data.participants;
+      allow delete: if isAdmin();
+      
+      match /messages/{msgId} {
+        allow read: if isChatParticipant(roomId);
+        allow create: if isSignedIn() && request.resource.data.senderId == request.auth.uid && isChatParticipant(roomId);
+        allow update: if isSignedIn() && isChatParticipant(roomId) && resource.data.senderId == request.auth.uid;
+        allow delete: if false;
+      }
+    }
+
+    // Company Profiles
+    match /companies/{companyId} {
+      allow read: if true;
+      allow write: if isOwner(companyId) || isAdmin();
+      match /profile/{docId} {
+        allow read: if true;
+        allow write: if isOwner(companyId) || isAdmin();
+      }
+    }
+
+    // Boost & Advertising Purchases
+    match /boost_purchases/{purchaseId} {
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow read: if (isSignedIn() && resource.data.userId == request.auth.uid) || isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    // General Spam/Content Reporting System
+    match /reports/{reportId} {
+      allow create: if isSignedIn();
+      allow read, update, delete: if isAdmin();
+    }
+
+    // Global Public Announcements
+    match /announcements/{annId} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // Ratings & Reviews Feedback System
+    match /reviews/{reviewId} {
+      allow read: if isSignedIn() && !isBanned();
+      allow create: if isSignedIn() && request.resource.data.reviewerId == request.auth.uid && !isBanned();
+      allow update, delete: if isSignedIn() && (resource.data.reviewerId == request.auth.uid || isAdmin());
+    }
+
+    // Secure Global Fallback
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+  }
+}

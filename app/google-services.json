@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1092890664142",
+    "project_id": "jobsite-85482",
+    "storage_bucket": "jobsite-85482.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092890664142:android:1d771bbc0881a1032cc49f",
+        "android_client_info": {
+          "package_name": "com.aistudio.talentmarket.nwbvqf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092890664142-hjdnlgvs5mqrk7h347e95g3f8vk7ujgj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aistudio.talentmarket.nwbvqf",
+            "certificate_hash": "6bccd6d1e7c322484a0b6033b884796013a79b1e"
+          }
+        },
+        {
+          "client_id": "1092890664142-11k2hu0mjssfb46vkgc7va3fv4unj7g2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc-YC9o2fckRV3zXALvM6W6eaJZALogFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092890664142-11k2hu0mjssfb46vkgc7va3fv4unj7g2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

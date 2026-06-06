@@ -1,0 +1,167 @@
+<resources>
+    <string name="profile">Profile</string>
+    <string name="notifications">Notifications</string>
+    <string name="no_notifications">No notifications yet</string>
+    <string name="mark_all_read">Mark all as read</string>
+    <string name="new_job_alert">New Job Announcement</string>
+    <string name="app_name">TalentMarket</string>
+    <string name="login">Login</string>
+    <string name="jobs">Jobs</string>
+    <string name="workers">Workers</string>
+    <string name="post">Post</string>
+    <string name="welcome_to_talentmarket">Welcome to TalentMarket</string>
+    <string name="login_register">Login or register to continue</string>
+    <string name="i_am_a">I am a...</string>
+    <string name="job_seeker">Job Seeker</string>
+    <string name="looking_for_job">Looking for a job</string>
+    <string name="employer">Employer</string>
+    <string name="looking_for_workers">Looking for workers</string>
+    <string name="phone_or_email">Phone Number or Email</string>
+    <string name="talentmarket">TalentMarket</string>
+    <string name="search_jobs_workers">Search jobs or workers...</string>
+    <string name="search_talent">Search available talent...</string>
+    <string name="all">All</string>
+    <string name="drivers">Drivers</string>
+    <string name="delivery">Delivery</string>
+    <string name="electricians">Electricians</string>
+    <string name="latest_jobs">Latest Jobs</string>
+    <string name="view_all">View All</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="details">Details</string>
+    <string name="available_talent">Available Talent</string>
+    <string name="post_and_connect">Post &amp; Connect</string>
+    <string name="looking_or_offering">Are you looking for talent, or offering your skills?</string>
+    <string name="post_a_job">Post a Job</string>
+    <string name="offer_skills">Offer Skills</string>
+    <string name="job_title">Job Title</string>
+    <string name="category">Category</string>
+    <string name="type">Type</string>
+    <string name="location">City</string>
+    <string name="job_desc">Job Description</string>
+    <string name="whatsapp_contact">WhatsApp Contact</string>
+    <string name="publish_job">Publish Job</string>
+    <string name="full_name">Full Name</string>
+    <string name="profession">Profession</string>
+    <string name="availability">Availability</string>
+    <string name="keywords_skills">Keywords / Skills</string>
+    <string name="publish_profile">Publish Profile</string>
+    <string name="sponsored_ad">SPONSORED AD</string>
+    <string name="sponsored_desc">High Performance Hosting for Startups</string>
+    <string name="continue_as_guest">Continue as Guest</string>
+    <string name="signup_required">Sign Up Required</string>
+    <string name="signup_message">You need to create an account to view contact information.</string>
+    <string name="signup_now">Sign Up Now</string>
+    <string name="call">Call</string>
+    <string name="email">Email</string>
+    <string name="job_type">Job Type</string>
+    <string name="cancel">Cancel</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+    <string name="advanced_filter">Advanced Filter</string>
+    <string name="all_countries">All Countries</string>
+    <string name="all_cities">All Cities</string>
+    <string name="all_categories">All Categories</string>
+    <string name="reset_filters">Reset Filters</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="name">Name</string>
+    <string name="bio_experience">Bio (Experience)</string>
+    <string name="skills_comma">Skills (Comma separated)</string>
+    <string name="save">Save</string>
+    <string name="my_worker_profile">My Worker Profile</string>
+    <string name="no_jobs_yet">No jobs posted yet.</string>
+    <string name="budget">Budget</string>
+    <string name="deadline">Deadline</string>
+    <string-array name="job_categories">
+        <item>Accounting</item>
+        <item>Administration</item>
+        <item>Agriculture</item>
+        <item>Architecture</item>
+        <item>Art &amp; Design</item>
+        <item>Automotive</item>
+        <item>Banking</item>
+        <item>Beauty &amp; Salon</item>
+        <item>Carpentry</item>
+        <item>Cleaner</item>
+        <item>Construction</item>
+        <item>Cook/Chef</item>
+        <item>Customer Service</item>
+        <item>Delivery</item>
+        <item>Driver</item>
+        <item>Education</item>
+        <item>Electrician</item>
+        <item>Engineering</item>
+        <item>Finance</item>
+        <item>Food &amp; Beverage</item>
+        <item>Guard</item>
+        <item>Healthcare</item>
+        <item>Hospitality</item>
+        <item>HR</item>
+        <item>HVAC</item>
+        <item>IT</item>
+        <item>Legal</item>
+        <item>Logistics</item>
+        <item>Maid/Nanny</item>
+        <item>Maintenance</item>
+        <item>Manager</item>
+        <item>Manufacturing</item>
+        <item>Marketing</item>
+        <item>Masonry</item>
+        <item>Mechanic</item>
+        <item>Media</item>
+        <item>Medical</item>
+        <item>Painting</item>
+        <item>Plumber</item>
+        <item>Real Estate</item>
+        <item>Restaurant</item>
+        <item>Retail</item>
+        <item>Sales</item>
+        <item>Security</item>
+        <item>Tailor</item>
+        <item>Technician</item>
+        <item>Tourism</item>
+        <item>Translation</item>
+        <item>Waiter</item>
+        <item>Warehousing</item>
+        <item>Welding</item>
+    </string-array>
+    <string-array name="countries">
+        <item>Saudi Arabia</item>
+        <item>United Arab Emirates</item>
+        <item>Qatar</item>
+        <item>Kuwait</item>
+        <item>Oman</item>
+        <item>Bahrain</item>
+        <item>Egypt</item>
+        <item>Jordan</item>
+        <item>Lebanon</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="job_types">
+        <item>Full Time</item>
+        <item>Part Time</item>
+        <item>Contract</item>
+        <item>Temporary</item>
+    </string-array>
+    <string-array name="availabilities">
+        <item>Available Now</item>
+        <item>Full Time</item>
+        <item>Part Time</item>
+        <item>Contract</item>
+    </string-array>
+    <string name="support">Support</string>
+    <string name="support_screen_title">Help &amp; Support</string>
+    <string name="admin_panel">Admin Panel</string>
+    <string name="support_list_admin">All Support Requests</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="premium">Premium</string>
+    <string name="saved_jobs">Saved Jobs</string>
+    <string name="applied_jobs">My Applications</string>
+    <string name="my_jobs">My Jobs</string>
+    <string name="my_applications">My Applications</string>
+    <string name="saved_workers">Saved Workers</string>
+    <string name="messages">Messages</string>
+</resources>

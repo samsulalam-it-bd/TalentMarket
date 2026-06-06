@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1092890664142",
+    "project_id": "jobsite-85482",
+    "storage_bucket": "jobsite-85482.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092890664142:android:1d771bbc0881a1032cc49f",
+        "android_client_info": {
+          "package_name": "com.aistudio.talentmarket.nwbvqf"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc-YC9o2fckRV3zXALvM6W6eaJZALogFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,167 @@
+<resources>
+    <string name="profile">الملف الشخصي</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="no_notifications">لا توجد إشعارات بعد</string>
+    <string name="mark_all_read">تحديد الكل كمقروء</string>
+    <string name="new_job_alert">إعلان وظيفة جديدة</string>
+    <string name="app_name">سوق المواهب</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="jobs">وظائف</string>
+    <string name="workers">عمال</string>
+    <string name="post">نشر</string>
+    <string name="welcome_to_talentmarket">مرحبا بكم في TalentMarket</string>
+    <string name="login_register">قم بتسجيل الدخول أو التسجيل للمتابعة</string>
+    <string name="i_am_a">أنا...</string>
+    <string name="job_seeker">باحث عن عمل</string>
+    <string name="looking_for_job">أبحث عن وظيفة</string>
+    <string name="employer">صاحب عمل</string>
+    <string name="looking_for_workers">أبحث عن عمال</string>
+    <string name="phone_or_email">رقم الهاتف أو البريد الإلكتروني</string>
+    <string name="talentmarket">TalentMarket</string>
+    <string name="search_jobs_workers">ابحث عن وظائف أو عمال...</string>
+    <string name="search_talent">البحث عن المواهب المتاحة...</string>
+    <string name="all">الكل</string>
+    <string name="drivers">سائقين</string>
+    <string name="delivery">توصيل</string>
+    <string name="electricians">كهربائيين</string>
+    <string name="latest_jobs">أحدث الوظائف</string>
+    <string name="view_all">عرض الكل</string>
+    <string name="whatsapp">واتساب</string>
+    <string name="details">تفاصيل</string>
+    <string name="available_talent">المواهب المتاحة</string>
+    <string name="post_and_connect">انشر وتواصل</string>
+    <string name="looking_or_offering">هل تبحث عن مواهب، أم تعرض مهاراتك؟</string>
+    <string name="post_a_job">انشر وظيفة</string>
+    <string name="offer_skills">عرض المهارات</string>
+    <string name="job_title">المسمى الوظيفي</string>
+    <string name="category">الفئة</string>
+    <string name="type">النوع</string>
+    <string name="location">المدينة</string>
+    <string name="job_desc">وصف الوظيفة</string>
+    <string name="whatsapp_contact">لتواصل واتساب</string>
+    <string name="publish_job">نشر الوظيفة</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="profession">المهنة</string>
+    <string name="availability">التوافر</string>
+    <string name="keywords_skills">الكلمات الرئيسية / المهارات</string>
+    <string name="publish_profile">نشر الملف الشخصي</string>
+    <string name="sponsored_ad">إعلان ممول</string>
+    <string name="sponsored_desc">استضافة عالية الأداء للشركات الناشئة</string>
+    <string name="continue_as_guest">المتابعة كضيف</string>
+    <string name="signup_required">التسجيل مطلوب</string>
+    <string name="signup_message">تحتاج إلى إنشاء حساب لعرض معلومات الاتصال.</string>
+    <string name="signup_now">سجل الآن</string>
+    <string name="call">اتصال</string>
+    <string name="email">بريد الكتروني</string>
+    <string name="job_type">نوع الوظيفة</string>
+    <string name="cancel">إلغاء</string>
+    <string name="country">الدولة</string>
+    <string name="city">المدينة</string>
+    <string name="search">بحث</string>
+    <string name="filter">تصفية</string>
+    <string name="advanced_filter">تصفية متقدمة</string>
+    <string name="all_countries">كل الدول</string>
+    <string name="all_cities">كل المدن</string>
+    <string name="all_categories">كل الفئات</string>
+    <string name="reset_filters">إعادة ضبط التصفية</string>
+    <string name="edit_profile">تعديل الملف الشخصي</string>
+    <string name="name">الاسم</string>
+    <string name="bio_experience">السيرة الذاتية (الخبرة)</string>
+    <string name="skills_comma">المهارات (مفصولة بفاصلة)</string>
+    <string name="save">حفظ</string>
+    <string name="my_worker_profile">ملف العامل الخاص بي</string>
+    <string name="no_jobs_yet">لم يتم نشر وظائف بعد.</string>
+    <string name="budget">الميزانية</string>
+    <string name="deadline">الموعد النهائي</string>
+    <string-array name="job_categories">
+        <item>المحاسبة</item>
+        <item>الإدارة</item>
+        <item>الزراعة</item>
+        <item>هندسة معمارية</item>
+        <item>الفن والتصميم</item>
+        <item>السيارات</item>
+        <item>الخدمات المصرفية</item>
+        <item>الجمال والصالون</item>
+        <item>نجارة</item>
+        <item>عامل نظافة</item>
+        <item>بناء</item>
+        <item>طباخ/شيف</item>
+        <item>خدمة العملاء</item>
+        <item>توصيل</item>
+        <item>سائق</item>
+        <item>التعليم</item>
+        <item>كهربائي</item>
+        <item>هندسة</item>
+        <item>المالية</item>
+        <item>المأكولات والمشروبات</item>
+        <item>حارس</item>
+        <item>رعاية صحية</item>
+        <item>الضيافة</item>
+        <item>الموارد البشرية</item>
+        <item>تكييف وتبريد</item>
+        <item>تقنية المعلومات</item>
+        <item>قانون</item>
+        <item>الخدمات اللوجستية</item>
+        <item>خادمة/مربية</item>
+        <item>صيانة</item>
+        <item>مدير</item>
+        <item>تصنيع</item>
+        <item>تسويق</item>
+        <item>بناء/معمار</item>
+        <item>ميكانيكي</item>
+        <item>إعلام</item>
+        <item>طبي</item>
+        <item>دهان/صباغ</item>
+        <item>سباك</item>
+        <item>عقارات</item>
+        <item>مطعم</item>
+        <item>بيع بالتجزئة</item>
+        <item>مبيعات</item>
+        <item>أمن</item>
+        <item>خياط</item>
+        <item>فني</item>
+        <item>سياحة</item>
+        <item>ترجمة</item>
+        <item>نادل</item>
+        <item>تخزين</item>
+        <item>لحام</item>
+    </string-array>
+    <string-array name="countries">
+        <item>المملكة العربية السعودية</item>
+        <item>الإمارات العربية المتحدة</item>
+        <item>قطر</item>
+        <item>الكويت</item>
+        <item>عمان</item>
+        <item>البحرين</item>
+        <item>مصر</item>
+        <item>الأردن</item>
+        <item>لبنان</item>
+        <item>أخرى</item>
+    </string-array>
+    <string-array name="job_types">
+        <item>دوام كامل</item>
+        <item>دوام جزئي</item>
+        <item>عقد</item>
+        <item>مؤقت</item>
+    </string-array>
+    <string-array name="availabilities">
+        <item>متاح الآن</item>
+        <item>دوام كامل</item>
+        <item>دوام جزئي</item>
+        <item>عقد</item>
+    </string-array>
+    <string name="support">الدعم الفني</string>
+    <string name="support_screen_title">المساعدة والدعم</string>
+    <string name="admin_panel">لوحة التحكم</string>
+    <string name="support_list_admin">كل طلبات الدعم</string>
+    <string name="subject">الموضوع</string>
+    <string name="message">الرسالة</string>
+    <string name="send">إرسال</string>
+    <string name="premium">العضوية المميزة</string>
+    <string name="saved_jobs">الوظائف المحفوظة</string>
+    <string name="applied_jobs">وظائف تم التقديم عليها</string>
+    <string name="my_jobs">وظائفي</string>
+    <string name="my_applications">طلباتي</string>
+    <string name="saved_workers">العمال المحفوظين</string>
+    <string name="messages">الرسائل</string>
+</resources>
